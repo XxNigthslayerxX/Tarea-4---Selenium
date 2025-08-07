@@ -264,7 +264,7 @@ async function historiaLogout(driver) {
     await historiaFinalizar(driver);
     await historiaLogout(driver);
   } catch (error) {
-    console.error("❌ Error inesperado:", error.message);
+    console.error("Error inesperado:", error.message);
     registrarPaso("Error general", "Fallo", error.message);
   } finally {
     await driver.quit();
