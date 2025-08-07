@@ -80,7 +80,7 @@ async function pausa(driver, ms = PAUSA_MS) {
   await driver.sleep(ms);
 }
 
-// === HISTORIAS DE USUARIO CON PAUSAS ===
+//Historia de usuario 1: Login/Inicio de sesión(Camino feliz)
 
 async function historiaLogin(driver) {
   try {
@@ -98,6 +98,8 @@ async function historiaLogin(driver) {
     registrarPaso("Login", "Fallo", err.message);
   }
 }
+
+//Historia de usuario 2: Agregar productos al carrito(Camino feliz)
 
 async function historiaAgregarProductos(driver) {
   try {
@@ -140,6 +142,8 @@ async function historiaAgregarProductos(driver) {
   }
 }
 
+//hIStoria de usuario 3: Remover producto del carrito(Camino feliz)
+
 async function historiaRemoverProducto(driver) {
   try {
     await pausa(driver);
@@ -168,6 +172,8 @@ async function historiaRemoverProducto(driver) {
     registrarPaso("Remover producto", "Fallo", err.message);
   }
 }
+
+//Historia de usuario 4: Checkout Y Finalizar compra (Camino feliz)
 
 async function historiaCheckout(driver) {
   try {
@@ -223,6 +229,8 @@ async function historiaFinalizar(driver) {
     registrarPaso("Finalizar compra", "Fallo", err.message);
   }
 }
+
+//Historia de usuario 5: Logout/Cerrar sesión (Camino feliz)
 
 async function historiaLogout(driver) {
   try {
